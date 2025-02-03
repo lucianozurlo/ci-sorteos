@@ -83,12 +83,12 @@ TEMPLATES = [
 WSGI_APPLICATION = "sorteo_project.wsgi.application"
 
 # Database
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 # DATABASES = {
 #     'default': dj_database_url.config(
 #         default=os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3'),
@@ -96,6 +96,28 @@ DATABASES = {
 #     )
 # }
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': os.environ.get('DB_HOST'),
+#         'PORT': os.environ.get('DB_PORT'),
+#   } 
+# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'mgqhdiQWvpVSvbsBxSMgIeyeagSSEsyZ',
+        'HOST': 'mysql-production-64d3.up.railway.app',
+        'PORT': '3306',
+    }
+}
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
