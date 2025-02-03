@@ -1,3 +1,0 @@
-[build]
-image = "python:3.10-slim"
-command = "python -m pip install -r requirements.txt"
